@@ -1,0 +1,57 @@
+{"properties": [
+  {
+    "name": "spring.datasource.main.driver-class-name",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.main.driver-class-name'"
+  },
+  {
+    "name": "spring.datasource.main.jdbc-url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.main.jdbc-url'"
+  },
+  {
+    "name": "spring.datasource.main.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.main.username'"
+  },
+  {
+    "name": "spring.datasource.main.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.main.password'"
+  },
+  {
+    "name": "spring.datasource.sub.jdbc-url",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.sub.jdbc-url'"
+  },
+  {
+    "name": "spring.datasource.sub.driver-class-name",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.sub.driver-class-name'"
+  },
+  {
+    "name": "spring.datasource.sub.username",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.sub.username'"
+  },
+  {
+    "name": "spring.datasource.sub.password",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.sub.password'"
+  },
+  {
+    "name": "log.config.path",
+    "type": "java.lang.String",
+    "description": "A description for 'log.config.path'"
+  },
+  {
+    "name": "log.config.filename",
+    "type": "java.lang.String",
+    "description": "A description for 'log.config.filename'"
+  },
+  {
+    "name": "log.config.error.filename",
+    "type": "java.lang.String",
+    "description": "A description for 'log.config.error.filename'"
+  }
+]}

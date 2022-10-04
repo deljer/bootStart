@@ -1,8 +1,6 @@
 package com.pjw.bootStart.config.datasource;
 
 
-import java.util.Properties;
-
 import javax.sql.DataSource;
 
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -33,13 +31,13 @@ public class MainDbConfig {
 	@Bean(name="mainDataSource")
 	@Primary
 	@ConfigurationProperties(prefix="spring.datasource.main")
-	public DataSource mainDataSource() {
+	DataSource mainDataSource() {
 		return DataSourceBuilder.create().build();
 	}
 	
 	@Bean(name="mainSessionFactory")
 	@Primary
-	public SqlSessionFactory sqlSessionFactory(@Qualifier("mainDataSource") DataSource mainDataSource, ApplicationContext applicationContext) throws Exception{
+	SqlSessionFactory sqlSessionFactory(@Qualifier("mainDataSource") DataSource mainDataSource, ApplicationContext applicationContext) throws Exception{
 		final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
 		sessionFactory.setDataSource(mainDataSource);
 		
@@ -51,13 +49,13 @@ public class MainDbConfig {
 	
 	@Bean(name="mainSqlSessionTemplate")
 	@Primary
-	public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory mainSessionFactory) throws Exception{
+	SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory mainSessionFactory) throws Exception{
 		return new SqlSessionTemplate(mainSessionFactory);
 	}
 	
     @Bean(name = "mainTransactionManager")
 	@Primary
-    public PlatformTransactionManager transactionManager(@Qualifier("mainDataSource") DataSource mainDataSource) {
+    PlatformTransactionManager transactionManager(@Qualifier("mainDataSource") DataSource mainDataSource) {
         return new DataSourceTransactionManager(mainDataSource);
     }
 }
