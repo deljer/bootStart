@@ -3,6 +3,7 @@ package com.pjw.bootStart.common.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import com.pjw.bootStart.common.mapper.MainMapper;
 import com.pjw.bootStart.common.mapper.sub.SubMapper;
@@ -21,8 +22,15 @@ public class CommonServiceImpl  implements CommonService{
 	
 	@Override
 	public int testInsert() throws Exception{
-		mainMapper.insertEmp();
-		subMapper.insertEmp();
+		
+		try {
+			mainMapper.insertEmp();
+			mainMapper.insertEmp2();
+			subMapper.insertEmp();
+		}catch (Exception e) {
+			TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+			System.out.println();
+		}
 		
 		return 0;
 	}

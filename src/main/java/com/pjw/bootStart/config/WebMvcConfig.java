@@ -22,12 +22,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	     		//.excludePathPatterns("/boards"); // 해당 경로는 인터셉터가 가로채지 않는다.
 	}
 	
-	
-	
-	
-	
-	
-	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		// /로 접속시 index.jsp 로 이동 
 		registry.addViewController("/").setViewName("forward:/index.jsp");

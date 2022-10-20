@@ -1,0 +1,51 @@
+INFO  22-10-17 16:07:21 [main] [bootStartApplication-logStarting:55] - Starting bootStartApplication using Java 17.0.3 on DESKTOP-FN0OOAL with PID 27864 (C:\springBoot\workpace_pjw\bootStart\bin\main started by wgsystem in C:\springBoot\workpace_pjw\bootStart)
+INFO  22-10-17 16:07:21 [main] [bootStartApplication-logStartupProfileInfo:634] - No active profile set, falling back to 1 default profile: "default"
+WARN  22-10-17 16:07:21 [main] [ClassPathMapperScanner-warn:44] - Skipping MapperFactoryBean with name 'subMapper' and 'com.pjw.bootStart.common.mapper.sub.SubMapper' mapperInterface. Bean already defined with the same name!
+WARN  22-10-17 16:07:21 [main] [ClassPathMapperScanner-warn:44] - No MyBatis mapper was found in '[com.pjw.bootStart.*.mapper.sub]' package. Please check your configuration.
+INFO  22-10-17 16:07:22 [main] [TomcatWebServer-initialize:108] - Tomcat initialized with port(s): 8081 (http)
+INFO  22-10-17 16:07:22 [main] [Http11NioProtocol-log:173] - Initializing ProtocolHandler ["http-nio-8081"]
+INFO  22-10-17 16:07:22 [main] [StandardService-log:173] - Starting service [Tomcat]
+INFO  22-10-17 16:07:22 [main] [StandardEngine-log:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-10-17 16:07:22 [main] [TldScanner-log:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  22-10-17 16:07:22 [main] [[/]-log:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-10-17 16:07:22 [main] [ServletWebServerApplicationContext-prepareWebApplicationContext:292] - Root WebApplicationContext: initialization completed in 1068 ms
+INFO  22-10-17 16:07:22 [main] [WelcomePageHandlerMapping-<init>:57] - Adding welcome page template: index
+INFO  22-10-17 16:07:22 [main] [Http11NioProtocol-log:173] - Starting ProtocolHandler ["http-nio-8081"]
+INFO  22-10-17 16:07:22 [main] [TomcatWebServer-start:220] - Tomcat started on port(s): 8081 (http) with context path ''
+INFO  22-10-17 16:07:23 [main] [bootStartApplication-logStarted:61] - Started bootStartApplication in 1.995 seconds (JVM running for 2.582)
+INFO  22-10-17 16:07:43 [http-nio-8081-exec-1] [[/]-log:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  22-10-17 16:07:43 [http-nio-8081-exec-1] [DispatcherServlet-initServletBean:525] - Initializing Servlet 'dispatcherServlet'
+INFO  22-10-17 16:07:43 [http-nio-8081-exec-1] [DispatcherServlet-initServletBean:547] - Completed initialization in 1 ms
+INFO  22-10-17 16:07:43 [http-nio-8081-exec-1] [RequestLogInterceptor-preHandle:28] - ============================== REQUEST_START ==============================
+INFO  22-10-17 16:07:43 [http-nio-8081-exec-1] [RequestLogInterceptor-preHandle:29] -  Request URI 	:  /test2
+INFO  22-10-17 16:07:43 [http-nio-8081-exec-1] [RequestLogInterceptor-preHandle:37] - ==================================================================== 
+INFO  22-10-17 16:08:40 [http-nio-8081-exec-3] [RequestLogInterceptor-preHandle:28] - ============================== REQUEST_START ==============================
+INFO  22-10-17 16:08:40 [http-nio-8081-exec-3] [RequestLogInterceptor-preHandle:29] -  Request URI 	:  /test2
+INFO  22-10-17 16:08:40 [http-nio-8081-exec-3] [RequestLogInterceptor-preHandle:37] - ==================================================================== 
+INFO  22-10-17 16:08:43 [RMI TCP Connection(9)-127.0.0.1] [SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin-shutdown:159] - Application shutdown requested.
+INFO  22-10-17 16:08:43 [RMI TCP Connection(9)-127.0.0.1] [Http11NioProtocol-log:173] - Pausing ProtocolHandler ["http-nio-8081"]
+INFO  22-10-17 16:08:43 [RMI TCP Connection(9)-127.0.0.1] [StandardService-log:173] - Stopping service [Tomcat]
+INFO  22-10-17 16:08:43 [RMI TCP Connection(9)-127.0.0.1] [[/]-log:173] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+INFO  22-10-17 16:08:43 [RMI TCP Connection(9)-127.0.0.1] [Http11NioProtocol-log:173] - Stopping ProtocolHandler ["http-nio-8081"]
+INFO  22-10-17 16:08:43 [RMI TCP Connection(9)-127.0.0.1] [Http11NioProtocol-log:173] - Destroying ProtocolHandler ["http-nio-8081"]
+INFO  22-10-17 16:08:45 [main] [bootStartApplication-logStarting:55] - Starting bootStartApplication using Java 17.0.3 on DESKTOP-FN0OOAL with PID 13124 (C:\springBoot\workpace_pjw\bootStart\bin\main started by wgsystem in C:\springBoot\workpace_pjw\bootStart)
+INFO  22-10-17 16:08:45 [main] [bootStartApplication-logStartupProfileInfo:634] - No active profile set, falling back to 1 default profile: "default"
+WARN  22-10-17 16:08:46 [main] [ClassPathMapperScanner-warn:44] - Skipping MapperFactoryBean with name 'subMapper' and 'com.pjw.bootStart.common.mapper.sub.SubMapper' mapperInterface. Bean already defined with the same name!
+WARN  22-10-17 16:08:46 [main] [ClassPathMapperScanner-warn:44] - No MyBatis mapper was found in '[com.pjw.bootStart.*.mapper.sub]' package. Please check your configuration.
+INFO  22-10-17 16:08:46 [main] [TomcatWebServer-initialize:108] - Tomcat initialized with port(s): 8081 (http)
+INFO  22-10-17 16:08:46 [main] [Http11NioProtocol-log:173] - Initializing ProtocolHandler ["http-nio-8081"]
+INFO  22-10-17 16:08:46 [main] [StandardService-log:173] - Starting service [Tomcat]
+INFO  22-10-17 16:08:46 [main] [StandardEngine-log:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-10-17 16:08:46 [main] [TldScanner-log:173] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFO  22-10-17 16:08:46 [main] [[/]-log:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-10-17 16:08:46 [main] [ServletWebServerApplicationContext-prepareWebApplicationContext:292] - Root WebApplicationContext: initialization completed in 1061 ms
+INFO  22-10-17 16:08:47 [main] [WelcomePageHandlerMapping-<init>:57] - Adding welcome page template: index
+INFO  22-10-17 16:08:47 [main] [Http11NioProtocol-log:173] - Starting ProtocolHandler ["http-nio-8081"]
+INFO  22-10-17 16:08:47 [main] [TomcatWebServer-start:220] - Tomcat started on port(s): 8081 (http) with context path ''
+INFO  22-10-17 16:08:47 [main] [bootStartApplication-logStarted:61] - Started bootStartApplication in 1.994 seconds (JVM running for 2.545)
+INFO  22-10-17 16:08:56 [http-nio-8081-exec-1] [[/]-log:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  22-10-17 16:08:56 [http-nio-8081-exec-1] [DispatcherServlet-initServletBean:525] - Initializing Servlet 'dispatcherServlet'
+INFO  22-10-17 16:08:56 [http-nio-8081-exec-1] [DispatcherServlet-initServletBean:547] - Completed initialization in 0 ms
+INFO  22-10-17 16:08:56 [http-nio-8081-exec-1] [RequestLogInterceptor-preHandle:28] - ============================== REQUEST_START ==============================
+INFO  22-10-17 16:08:56 [http-nio-8081-exec-1] [RequestLogInterceptor-preHandle:29] -  Request URI 	:  /test2
+INFO  22-10-17 16:08:56 [http-nio-8081-exec-1] [RequestLogInterceptor-preHandle:37] - ==================================================================== 

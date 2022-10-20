@@ -3,10 +3,18 @@
 <mapper namespace="com.pjw.bootStart.common.mapper.MainMapper">
 	
 	<insert id="insertEmp" >
+		insert into TB_PT_COUNSELING
+		(COUNSEL_NO,
+		COUNSEL_CD,TITLE,CONTENTS,VIEWS,REG_ID)	
+		values (29, 'qwe','asd','asd',123,123)
+	</insert>
+	
+	
+	<insert id="insertEmp2" >
 		insert into authority
 		(username,
-		authority_name)	
-		values ('aaa', 'wwwwwwww2')
+		authority_name,TITLE)	
+		values (29, 'asd','asd')
 	</insert>
 			
 </mapper>

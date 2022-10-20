@@ -21,7 +21,6 @@ import org.springframework.stereotype.Component;
 public class AspectAop {
 	private static final Logger log = LoggerFactory.getLogger(AspectAop.class);
 	
-	
 	@Pointcut("execution(* com.pjw.bootStart.*.service.*.*(..))")
 	private void serviceExecution() {}
 	
@@ -31,6 +30,7 @@ public class AspectAop {
 		 log.info(String.valueOf(obj) );
 		return obj;
 	}
+	 
 	
 	
 	
