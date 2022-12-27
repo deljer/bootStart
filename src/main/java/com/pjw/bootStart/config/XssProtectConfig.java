@@ -2,6 +2,7 @@ package com.pjw.bootStart.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,13 +20,5 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class XssProtectConfig {
 
-    private final ObjectMapper mapper;
-
-    @Bean
-    MappingJackson2HttpMessageConverter characterEscapeConverter() {
-        ObjectMapper objectMapper = mapper.copy();
-        objectMapper.getFactory().setCharacterEscapes(new XssProtectSupportUtill());
-        return new MappingJackson2HttpMessageConverter(objectMapper);
-    }
 }
 

@@ -1,17 +1,28 @@
 package com.pjw.bootStart.config;
 
+import java.util.List;
+
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.servlet.DispatcherServlet;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pjw.bootStart.config.interceptor.RequestLogInterceptor;
+import com.pjw.bootStart.config.utill.XssProtectSupportUtill;
 
 import lombok.RequiredArgsConstructor;
 
 @Configuration
 @RequiredArgsConstructor
+@EnableWebMvc
 public class WebMvcConfig implements WebMvcConfigurer {
 
 	/** interceptor 추가 시  필요 **/
@@ -21,6 +32,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	     		.addPathPatterns("/*"); // 해당 경로에 접근하기 전에 인터셉터가 가로챈다.
 	     		//.excludePathPatterns("/boards"); // 해당 경로는 인터셉터가 가로채지 않는다.
 	}
+	
 	
 	public void addViewControllers(ViewControllerRegistry registry) {
 		// /로 접속시 index.jsp 로 이동 
@@ -36,6 +48,28 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		registry.jsp( "/WEB-INF/views/", ".jsp" );
 		WebMvcConfigurer.super.configureViewResolvers( registry );
 	}
+	
+	/*ResourceHandlers 설정 
+	 * 들어오는 정적 파일 위치를 설정한다.
+	 * **/
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/**/*.html").addResourceLocations("classpath:/static/html/");
+		registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+	}
+
+	@Override
+	public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
+		System.err.println();
+	}
+	
+    @Bean
+    MappingJackson2HttpMessageConverter characterEscapeConverter() {
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.getFactory().setCharacterEscapes(new XssProtectSupportUtill());
+        return new MappingJackson2HttpMessageConverter(objectMapper);
+        
+    }
 	
 	
 	

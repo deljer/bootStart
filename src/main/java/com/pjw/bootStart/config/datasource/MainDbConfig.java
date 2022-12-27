@@ -21,7 +21,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @Configuration
-
 //어떤 패키지에서 java mapper들을 scan할 것인가를 최상위에 annotation으로 정의하여 주고 있다. 
 @MapperScan(basePackages="com.pjw.bootStart.**.mapper" ,sqlSessionFactoryRef="mainSessionFactory")
 //TransactionManager를 적용할 것인지에 대해 설정하는 annotation 이다.
