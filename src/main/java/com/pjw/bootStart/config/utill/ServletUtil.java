@@ -27,7 +27,7 @@ public class ServletUtil {
 		HttpServletResponse response =null;
 		ServletRequestAttributes servletRequestAttribute = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
 		response = servletRequestAttribute.getResponse();
-		System.out.println("asdasd");
+		System.out.println("sdasd");
 		return response;
 	}
 
