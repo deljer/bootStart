@@ -39,6 +39,7 @@ public class HttpSessionListenerConfig implements HttpSessionListener  {
     
     public HttpSessionListenerConfig() {
         super();
+        System.out.println("test");
         activeSessions = new AtomicInteger();
     }
 
@@ -52,7 +53,6 @@ public class HttpSessionListenerConfig implements HttpSessionListener  {
     	HttpSession session =  sessionEvent.getSession();
     	activeSessions.incrementAndGet();
         session.setMaxInactiveInterval(sessionTime);
-        log.info("session_id = "+sessionEvent.getSession().getId().toString()+"이 시작 현재 세션 수 "+String.valueOf(activeSessions.get()) );
         
     }
 
@@ -60,7 +60,6 @@ public class HttpSessionListenerConfig implements HttpSessionListener  {
     @Override
     public void sessionDestroyed(HttpSessionEvent sessionEvent) {
         activeSessions.decrementAndGet();
-        log.info("session_id = "+sessionEvent.getSession().getId().toString()+"이 세션 만료됨 현재 세션 수 "+String.valueOf(activeSessions.get()));
     }
     
 }
